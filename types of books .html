@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Types of Books</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #7b4397, #dc2430);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .book-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #dc2430;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background-color: #dc2430;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #b61d27;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #dc2430;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 100;
+    }
+
+    .scroll-top.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Explore Types of Books</h1>
+    <p>Find your next favorite read</p>
+  </header>
+
+  <section class="book-types">
+    <div class="card">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/91uwocAMtSL.jpg" alt="Fiction">
+      <h3>The Alchemist</h3>
+      <p class="price">₹399</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/61Iz2yy2CKL.jpg" alt="Non-Fiction">
+      <h3>Atomic Habits</h3>
+      <p class="price">₹449</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/81-QB7nDh4L.jpg" alt="Fantasy">
+      <h3>Harry Potter</h3>
+      <p class="price">₹599</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/71UypkUjStL.jpg" alt="Biography">
+      <h3>Wings of Fire</h3>
+      <p class="price">₹349</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/71kxa1-0zfL.jpg" alt="Sci-Fi">
+      <h3>The Martian</h3>
+      <p class="price">₹479</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/81AFxFlC4eL.jpg" alt="Mystery">
+      <h3>Gone Girl</h3>
+      <p class="price">₹399</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/81CpQwU6R0L.jpg" alt="Romance">
+      <h3>It Ends With Us</h3>
+      <p class="price">₹379</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/91A5WaP2QvL.jpg" alt="History">
+      <h3>Sapiens</h3>
+      <p class="price">₹499</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 BookWorld. All rights reserved.</p>
+  </footer>
+
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script>
+    const scrollBtn = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('show', window.scrollY > 300);
+    });
+  </script>
+</body>
+</html>
